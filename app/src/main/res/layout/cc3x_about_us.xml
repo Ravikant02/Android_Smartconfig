@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- cc3x_about_us.xml
+* File: 
+* Copyright © 2013, Texas Instruments Incorporated - http://www.ti.com/
+* All rights reserved.
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/cc3x_about_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/cc3x_headerlayout" />
+
+    <TextView
+        android:id="@+id/about_us_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cc3x_about_header_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/about_title_label_top_margin"
+        android:text="@string/about_us_label"
+        android:textColor="@color/grey_text_color"
+        android:textSize="@dimen/extra_large_text_size"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/min_divider_height"
+        android:layout_below="@+id/about_us_textview"
+        android:layout_marginLeft="@dimen/about_title_label_side_margin"
+        android:layout_marginRight="@dimen/about_title_label_side_margin"
+        android:background="@drawable/about_page_divline" />
+
+    <WebView
+        android:id="@+id/about_us_desc_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginLeft="@dimen/about_title_label_side_margin"
+        android:layout_marginRight="@dimen/about_title_label_side_margin"
+        android:layout_marginTop="@dimen/min_margin_cutoff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/about_us_desc_webview" >
+
+        <TextView
+            android:id="@+id/about_screen_contact_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_us_desc_webview"
+            android:layout_centerHorizontal="true"
+            android:text="@string/contact_label"
+            android:textColor="@color/grey_text_color"
+            android:textSize="25dip"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_divider_height"
+            android:layout_below="@+id/about_screen_contact_label"
+            android:layout_marginLeft="@dimen/about_title_label_side_margin"
+            android:layout_marginRight="@dimen/about_title_label_side_margin"
+            android:background="@drawable/about_page_divline" />
+
+        <TextView
+            android:id="@+id/about_xcube_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider_bottom"
+            android:layout_margin="@dimen/max_margin_size"
+            android:autoLink="web"
+            android:text="@string/xcube_url"
+            android:textColor="@color/blue_text_color"
+            android:textColorLink="@color/blue_text_color"
+            android:textSize="10dip" />
+
+        <TextView
+            android:id="@+id/about_xcube_contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/divider_bottom"
+            android:layout_margin="@dimen/max_margin_size"
+            android:autoLink="email"
+            android:text="@string/xcube_contact_email"
+            android:textSize="@dimen/small_text_height" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_xcube_link"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/about_xcube_address"
+            android:textColor="@color/grey_text_color"
+            android:textSize="@dimen/small_text_height" />
+    </RelativeLayout>
+
+</RelativeLayout>
